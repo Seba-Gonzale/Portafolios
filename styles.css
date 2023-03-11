@@ -1,0 +1,52 @@
+html {
+  box-sizing: border-box;
+  height: 100vh;
+}
+body {
+  min-height: 100%;
+  padding: 2rem;
+}
+
+.navegacion {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu {
+  flex: 1 1 auto;
+}
+
+.menu-item {
+  display: inline-block;
+}
+
+.perfil {
+  text-align: center;
+  /* position: relative; */
+}
+
+.perfil-imagen {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 0% 0%;
+}
+
+.perfil-iniciales {
+  position: relative;
+  top: -13%;
+  left: -15%;
+  /* color: rgb(0, 255, 191); */
+  color: transparent;
+  font: 5rem Playball, cursive;
+  background: linear-gradient(to right, #00b7ff, #00e03f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* text-shadow: 1px 1px rgb(0, 0, 0, 0.5); */
+}
+
+.perfil-nombreCompleto {
+  overflow: visible;
+  font: bold 3rem "Allura", cursive;
+}
