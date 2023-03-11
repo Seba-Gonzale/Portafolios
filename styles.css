@@ -1,3 +1,7 @@
+:root {
+  --backgroundColor: #d6fff1;
+}
+
 html {
   box-sizing: border-box;
   height: 100vh;
@@ -9,18 +13,26 @@ body {
 
 .navegacion {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+
+  height: 100px;
+  background-color: #00ffaa30;
 }
 
 .menu {
-  flex: 1 1 auto;
+  flex: 1 1 33%;
+
+  display: flex;
+  align-items: center;
 }
 
 .menu-item {
-  display: inline-block;
+  font: 1rem Monserrat, Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
 }
 
 .perfil {
+  flex: 1 1 auto;
   text-align: center;
   /* position: relative; */
 }
@@ -28,25 +40,26 @@ body {
 .perfil-imagen {
   width: 200px;
   height: 200px;
+  border: 10px solid var(--backgroundColor);
   border-radius: 50%;
   object-fit: cover;
   object-position: 0% 0%;
 }
 
 .perfil-iniciales {
-  position: relative;
-  top: -13%;
-  left: -15%;
+  position: absolute;
+  top: 22%;
+  left: 41%;
   /* color: rgb(0, 255, 191); */
   color: transparent;
   font: 5rem Playball, cursive;
-  background: linear-gradient(to right, #00b7ff, #00e03f);
+  background: linear-gradient(to bottom, #00ffaa 0%, #000000 90%);
   -webkit-background-clip: text;
   background-clip: text;
-  /* text-shadow: 1px 1px rgb(0, 0, 0, 0.5); */
 }
 
 .perfil-nombreCompleto {
-  overflow: visible;
-  font: bold 3rem "Allura", cursive;
+  position: relative;
+  top: 20%;
+  font: 3rem "Allura", cursive;
 }
