@@ -1,32 +1,47 @@
 :root {
   --backgroundColorBody: #fafafa;
-  --backgroundColor: #d6fff1;
+  --backgroundColor: #c1ffda;
   --boxShadow: 0px 5px 10px 0px #ccc;
   --boxPadding: 0.5rem 2rem;
+  --textColor: #111;
 }
 
 html {
   box-sizing: border-box;
   height: 100vh;
+  color: var(--textColor);
 }
 body {
   min-height: 100%;
   padding: 0 6rem;
   background-color: var(--backgroundColorBody);
 }
+a {
+  text-decoration: none;
+}
 a:hover {
   cursor: pointer;
+}
+a:visited {
+  color: var(--textColor);
+}
+b {
+  font-weight: bold;
 }
 
 .navegacion {
   display: flex;
   align-items: center;
 
-  position: sticky;
   padding: var(--boxPadding);
   border-radius: 10px;
-  background-color: var(--backgroundColor);
-  box-shadow: var(--boxShadow);
+  background-image: linear-gradient(
+    to bottom,
+    var(--backgroundColor) 60%,
+    transparent 100%
+  );
+  /* background-color: var(--backgroundColor); */
+  /* box-shadow: var(--boxShadow); */
 }
 
 .logo {
@@ -59,6 +74,7 @@ a:hover {
 
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   align-content: center;
   justify-content: flex-end;
   gap: 15px;
@@ -127,29 +143,28 @@ a:hover {
   display: flex;
   align-items: baseline;
   justify-content: center;
-
   gap: 20px;
+
+  padding-top: 1rem;
   font-family: "Courier New", Courier, monospace;
   font-size: 0.9rem;
 }
-.github-icon {
-  height: 55px;
-}
-.instagram-icon {
-  height: 40px;
-  margin-bottom: 5px;
-}
-.linkedin-icon {
-  height: 45px;
-}
+
+.github-icon,
+.instagram-icon,
+.linkedin-icon,
 .curriculum-icon {
-  height: 45px;
+  height: 50px;
 }
 
 .sobreMi {
-  background-color: var(--backgroundColor);
+  background-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    var(--backgroundColor) 4rem 4rem,
+    transparent 100%
+  );
   border-radius: 10px;
-  box-shadow: var(--boxShadow);
   padding: 2rem;
 }
 .sobreMi-titulo {
