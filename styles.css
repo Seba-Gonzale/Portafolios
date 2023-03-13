@@ -1,5 +1,8 @@
 :root {
+  --backgroundColorBody: #fafafa;
   --backgroundColor: #d6fff1;
+  --boxShadow: 0px 5px 10px 0px #ccc;
+  --boxPadding: 0.5rem 2rem;
 }
 
 html {
@@ -8,15 +11,22 @@ html {
 }
 body {
   min-height: 100%;
+  padding: 0 6rem;
+  background-color: var(--backgroundColorBody);
+}
+a:hover {
+  cursor: pointer;
 }
 
 .navegacion {
   display: flex;
   align-items: center;
 
-  padding: 0.5rem 2rem;
+  position: sticky;
+  padding: var(--boxPadding);
+  border-radius: 10px;
   background-color: var(--backgroundColor);
-  box-shadow: 0px 5px 15px 0px #aaa;
+  box-shadow: var(--boxShadow);
 }
 
 .logo {
@@ -35,6 +45,13 @@ body {
   background: linear-gradient(to bottom, #00ffaa 0%, #000000 90%);
   -webkit-background-clip: text;
   background-clip: text;
+}
+.logo-nombreCompleto {
+  display: inline-block;
+  font: 1.2rem Georgia, "Allura", cursive;
+  font-style: italic;
+  /* text-shadow: 1px 1px 3px gray; */
+  /* white-space: nowrap; */
 }
 
 .menu {
@@ -60,32 +77,89 @@ body {
   color: #00412b;
 }
 
+.presentacion {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  margin: 2rem 4rem;
+}
 .perfil {
   text-align: center;
-  /* position: relative; */
 }
 
 .perfil-imagen {
-  width: 200px;
-  height: 200px;
-  border: 10px solid var(--backgroundColor);
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
   object-position: 0% 0%;
+  box-shadow: 0px 2px 10px 0 gray;
 }
 
-.perfil-nombreCompleto {
-  display: inline-block;
-  font: 1.5rem Georgia, "Allura", cursive;
-  font-style: italic;
-  text-shadow: 1px 1px 3px gray;
-  white-space: nowrap;
-}
 .perfil-profesion {
+  /* display: inline-block; */
+  display: none;
   font: 1.5rem Georgia, "Times New Roman", Times, serif;
   background-color: var(--backgroundColor);
-  display: inline-block;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 0px 5px 10px rgb(197, 197, 197);
+  box-shadow: 0px 5px 10px var(--boxShadow);
+}
+
+.presentacion-texto {
+  padding: 10px;
+  text-align: center;
+}
+
+.presentacion-texto-titulo {
+  font: bolder 3rem Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  text-shadow: 0px 2px 2px var(--boxShadow);
+}
+
+.presentacion-texto-parrafo {
+  font: 1rem Arial, Helvetica, sans-serif;
+  line-height: 1.5rem;
+}
+
+.redes-de-contacto {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+
+  gap: 20px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9rem;
+}
+.github-icon {
+  height: 55px;
+}
+.instagram-icon {
+  height: 40px;
+  margin-bottom: 5px;
+}
+.linkedin-icon {
+  height: 45px;
+}
+.curriculum-icon {
+  height: 45px;
+}
+
+.sobreMi {
+  background-color: var(--backgroundColor);
+  border-radius: 10px;
+  box-shadow: var(--boxShadow);
+  padding: 2rem;
+}
+.sobreMi-titulo {
+  font: bold 3rem Georgia;
+}
+
+.sobreMi-parrafo {
+  font: 1rem Arial, Helvetica, sans-serif;
+  line-height: 1.5rem;
+}
+.sobreMi-parrafo > p {
+  text-indent: 2rem;
 }
