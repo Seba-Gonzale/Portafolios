@@ -32,7 +32,7 @@
 
         <ul class="menu">
           <li class="menu-item">
-            <a class="menu-item-link" href="#">Sobre mi</a>
+            <a class="menu-item-link" href="#sobreMi">Sobre mi</a>
           </li>
           <li class="menu-item">
             <a class="menu-item-link" href="#">Skills</a>
@@ -70,9 +70,6 @@
             width="250"
             height="250"
           />
-          <figcaption class="perfil-profesion">
-            Desarrollador Front-End
-          </figcaption>
         </figure>
 
         <div class="presentacion-texto">
@@ -154,9 +151,9 @@
     </header>
 
     <main class="principal">
-      <section class="sobreMi">
+      <section id="sobreMi">
         <h3 class="sobreMi-titulo">Sobre mi</h3>
-        <article class="sobreMi-parrafo">
+        <article class="sobreMi-parrafos">
           <p>
             Soy una persona proactiva, me relaciono bien con otras personas sin
             importar los intereses, me gusta comprender a fondo las cosas y ver
@@ -168,18 +165,95 @@
         </article>
       </section>
 
-      <section class="skills">
+      <section id="skills">
         <h3 class="skills-titulo">Skills</h3>
-        <ul>
-          <li></li>
+        <ul class="skills-lista">
+          <li class="skills-ul-html">
+            <img
+              class="skills-icons"
+              src="./public/images/html-icon.png"
+              alt="HTML5"
+            />
+            <p class="skills-ul-etiqueta">HTML 5</p>
+          </li>
+          <li class="skills-ul-css">
+            <img
+              class="skills-icons"
+              src="./public/images/css3-icon.png"
+              alt="CSS3"
+            />
+            <p class="skills-ul-etiqueta">CSS 3</p>
+          </li>
+          <li class="skills-ul-js">
+            <img
+              class="skills-icons"
+              src="./public/images/javascript-icon.png"
+              alt="JavaScript"
+            />
+            <p class="skills-ul-etiqueta">JavaScript</p>
+          </li>
+          <li class="skills-ul-react">
+            <img
+              class="skills-icons skills-icon-react"
+              src="./public/images/react-icon.svg"
+              alt="React JS"
+              height="128"
+            />
+            <span class="skills-learning">Learning...</span>
+            <p class="skills-ul-etiqueta etiqueta-react">React JS</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="hobbies">
+        <h3 class="hobbies-titulo">Hobbies</h3>
+        <ul class="hobbies-lista">
+          <li class="hobbies-lista-musica">
+            <img src="./public/images/parlantes.jpg" alt="Escuchar música" />
+            <p>Escuchar música</p>
+          </li>
+          <li class="hobbies-lista-series">
+            <img src="./public/images/seriesDeTv.jpg" alt="series de tv" />
+            <p class="">Ver series</p>
+          </li>
+          <li class="hobbies-lista-familia">
+            <img src="./public/images/familia.jpg" alt="ratos en familia" />
+            <p class="">Pasar tiempo con la familia</p>
+          </li>
+          <li class="hobbies-lista-experimentos">
+            <img
+              src="./public/images/experimentos.jpg"
+              alt="hacer experimentos"
+            />
+            <p class="">Hacer experimentos</p>
+          </li>
+          <li class="hobbies-lista-autoconocimiento">
+            <img src="./public/images/meditacion.jpg" alt="autoconocimiento" />
+            <p class="">Conocerme cada día mas</p>
+          </li>
+          <li class="hobbies-lista-paseo">
+            <img src="./public/images/pasear.jpg" alt="pasear" />
+            <p class="">Dar paseos</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="formacion">
+        <h3 class="formacion-titulo">Formación Academica</h3>
+        <ul class="formacion-lista">
+          <li class="formacion-lista-items"></li>
+          <li class="formacion-lista-items"></li>
+          <li class="formacion-lista-items"></li>
+          <li class="formacion-lista-items"></li>
         </ul>
       </section>
     </main>
-
-    <a target="_blank" href="https://icons8.com/icon/Xy10Jcu1L2Su/instagram"
-      >Instagram</a
-    >
-    icon by
-    <a target="_blank" href="https://icons8.com">Icons8</a>
+    <div style="display: none">
+      <a target="_blank" href="https://icons8.com/icon/Xy10Jcu1L2Su/instagram"
+        >Instagram</a
+      >
+      icon by
+      <a target="_blank" href="https://icons8.com">Icons8</a>
+    </div>
   </body>
 </html>
