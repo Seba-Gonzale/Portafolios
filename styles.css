@@ -227,8 +227,8 @@ h3 {
   );
   border-radius: 20px;
   padding: var(--boxPadding);
-  padding-bottom: 5rem;
-  height: calc(60vw);
+  padding-bottom: 1rem;
+  height: 75vw;
 }
 
 .hobbies-lista {
@@ -293,3 +293,11 @@ h3 {
   padding: var(--boxPadding);
   padding-bottom: 5rem;
 }
+
+.formacion-lista {
+  display: flex;
+}
+/* .formacion-lista-items img {
+  width: 100px;
+  height: 100px;
+} */
