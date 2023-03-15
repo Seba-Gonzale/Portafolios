@@ -21,62 +21,67 @@
   </head>
 
   <body>
+    <nav class="navegacion">
+      <div class="logo">
+        <a href="#">
+          <h1 class="logo__iniciales">ASG</h1>
+        </a>
+        <a href="#">
+          <h2 class="logo__nombre-completo">Augusto Sebastian Gonzale</h2>
+        </a>
+      </div>
+
+      <ul class="menu">
+        <li class="menu__item">
+          <a class="menu__item__link" href="#sobre-mi">Sobre mi</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__item__link" href="#skills">Skills</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__item__link" href="#hobbies">Hobbies</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__item__link" href="#formacion">Formación</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__item__link" href="#proyectos">Proyectos</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__item__link" href="#contacto">Contacto</a>
+        </li>
+        <li class="menu__item">
+          <a
+            class="menu__item__link"
+            href="./pages/autobiografia.html"
+            target="_blank"
+            ><img
+              src="./public/images/autobiografía.png"
+              alt="autobiografía"
+              title="Autobiografía"
+              height="35"
+          /></a>
+        </li>
+      </ul>
+    </nav>
+
     <header class="header">
-      <nav class="navegacion">
-        <div class="logo">
-          <a href="#">
-            <h1 class="logo-iniciales">ASG</h1>
-          </a>
-          <h2 class="logo-nombreCompleto">Augusto Sebastian Gonzale</h2>
-        </div>
-
-        <ul class="menu">
-          <li class="menu-item">
-            <a class="menu-item-link" href="#sobreMi">Sobre mi</a>
-          </li>
-          <li class="menu-item">
-            <a class="menu-item-link" href="#">Skills</a>
-          </li>
-          <li class="menu-item">
-            <a class="menu-item-link" href="#">Hobbies</a>
-          </li>
-          <li class="menu-item">
-            <a class="menu-item-link" href="#">Formación</a>
-          </li>
-          <li class="menu-item">
-            <a class="menu-item-link" href="#">Proyectos</a>
-          </li>
-          <li class="menu-item">
-            <a class="menu-item-link" href="#">Contacto</a>
-          </li>
-          <li class="menu-item">
-            <a class="menu-item-link" href="./pages/autobiografia.html"
-              ><img
-                src="./public/images/autobiografía.png"
-                alt="autobiografía"
-                title="Autobiografía"
-                height="35"
-            /></a>
-          </li>
-        </ul>
-      </nav>
-
       <section class="presentacion">
-        <figure class="perfil">
+        <figure class="presentacion__perfil">
           <img
-            src="./public/images/AugustoSebastianGonzale.jpg"
+            src="./public/images/biografia/yo.JPG"
             alt="Augusto Sebastian Gonzale"
-            class="perfil-imagen"
+            class="presentacion__perfil__imagen"
             width="250"
             height="250"
           />
         </figure>
 
-        <div class="presentacion-texto">
-          <h3 class="presentacion-texto-titulo">
+        <div class="presentacion__texto">
+          <h3 class="presentacion__texto-titulo">
             Hola, soy Sebastian y soy desarrollador front-end
           </h3>
-          <p class="presentacion-texto-parrafo">
+          <p class="presentacion__texto-parrafo">
             Tengo <span data-edad>27 años</span> y soy Argentino.<br />
             Desarrollo páginas web del lado del cliente, con las herramientas
             HTML, CSS y JavaScript; y prontamente tambien con ReactJs.
@@ -147,131 +152,130 @@
     </header>
 
     <main class="principal">
-      <section id="sobreMi">
-        <h3 class="sobreMi-titulo">Sobre mi</h3>
-        <article class="sobreMi-parrafos">
+      <section id="sobre-mi">
+        <h3 class="sobre-mi__titulo">Sobre mi</h3>
+        <article class="sobre-mi__parrafos">
           <p>
             Soy una persona proactiva, me relaciono bien con otras personas sin
             importar los intereses, me gusta comprender a fondo las cosas y ver
-            que se puede mejorar, me agradan los temas de ciencia, filosofia y
-            espiritualidad, soy algo reservado al principio pero es mas que nada
-            para no perturbar a las personas que me rodean con mis rarezas y
-            poder crear un ambiente tranquilo.
+            que se pueden mejorar, me agradan los temas de ciencia, filosofia y
+            espiritualidad; soy algo reservado al principio pero solo para no
+            ser inadecuado con los demás hasta que nos conozcamos mejor.
           </p>
         </article>
       </section>
 
       <section id="skills">
-        <h3 class="skills-titulo">Skills</h3>
-        <ul class="skills-lista">
-          <li class="skills-ul-html">
+        <h3 class="skills__titulo">Skills</h3>
+        <ul class="skills__lista">
+          <li class="skills__ul__html">
             <img
-              class="skills-icons"
+              class="skills__icons"
               src="./public/images/html-icon.png"
               alt="HTML5"
             />
-            <p class="skills-ul-etiqueta">HTML 5</p>
+            <p class="skills__ul__etiqueta">HTML 5</p>
           </li>
-          <li class="skills-ul-css">
+          <li class="skills__ul__css">
             <img
-              class="skills-icons"
+              class="skills__icons"
               src="./public/images/css3-icon.png"
               alt="CSS3"
             />
-            <p class="skills-ul-etiqueta">CSS 3</p>
+            <p class="skills__ul__etiqueta">CSS 3</p>
           </li>
-          <li class="skills-ul-js">
+          <li class="skills__ul__js">
             <img
-              class="skills-icons"
+              class="skills__icons"
               src="./public/images/javascript-icon.png"
               alt="JavaScript"
             />
-            <p class="skills-ul-etiqueta">JavaScript</p>
+            <p class="skills__ul__etiqueta">JavaScript</p>
           </li>
-          <li class="skills-ul-react">
+          <li class="skills__ul__react">
             <img
-              class="skills-icons skills-icon-react"
+              class="skills__icons skills__icon--react"
               src="./public/images/react-icon.svg"
               alt="React JS"
               height="128"
             />
-            <span class="skills-learning">Learning...</span>
-            <p class="skills-ul-etiqueta etiqueta-react">React JS</p>
+            <span class="skills__learning">Learning...</span>
+            <p class="skills__ul__etiqueta etiqueta-react">React JS</p>
           </li>
         </ul>
 
-        <h2 class="skills-softSkills-titulo">Soft Skills</h2>
-        <ul class="skills-lista skills-softSkills-lista">
+        <h2 class="skills__soft-skills-titulo">Soft Skills</h2>
+        <ul class="skills__lista skills__soft-skills-lista">
           <li>
             <img
-              class="skills-icons"
+              class="skills__icons"
               src="./public/images/comunicacionEfectiva-icon.png"
               alt="comunicacion efectiva"
             />
-            <p class="skills-ul-etiqueta">Comunicación<br />Efectiva</p>
+            <p class="skills__ul__etiqueta">Comunicación<br />Efectiva</p>
           </li>
           <li>
             <img
-              class="skills-icons"
+              class="skills__icons"
               src="./public/images/empatia-icon.png"
               alt="empatia"
             />
-            <p class="skills-ul-etiqueta">Empatía</p>
+            <p class="skills__ul__etiqueta">Empatía</p>
           </li>
           <li>
             <img
-              class="skills-icons"
+              class="skills__icons"
               src="./public/images/pensamientoCritico-icon.png"
               alt="pensamiento critico"
             />
-            <p class="skills-ul-etiqueta">Pensamiento<br />Crítico</p>
+            <p class="skills__ul__etiqueta">Pensamiento<br />Crítico</p>
           </li>
           <li>
             <img
-              class="skills-icons"
+              class="skills__icons"
               src="./public/images/gestionDelTiempo-icon.png"
               alt="gestion del tiempo"
             />
-            <p class="skills-ul-etiqueta">Gestion<br />del<br />tiempo</p>
+            <p class="skills__ul__etiqueta">Gestion<br />del<br />tiempo</p>
           </li>
           <li>
             <img
-              class="skills-icons"
+              class="skills__icons"
               src="./public/images/trabajoEnEquipo-icon.png"
               alt="trabajo en equipo"
             />
-            <p class="skills-ul-etiqueta">Trabajo<br />en<br />Equipo</p>
+            <p class="skills__ul__etiqueta">Trabajo<br />en<br />Equipo</p>
           </li>
         </ul>
       </section>
 
       <section id="hobbies">
-        <h3 class="hobbies-titulo">Hobbies</h3>
-        <ul class="hobbies-lista">
-          <li class="hobbies-lista-musica">
+        <h3 class="hobbies__titulo">Hobbies</h3>
+        <ul class="hobbies__lista">
+          <li class="hobbies__lista__musica">
             <img src="./public/images/parlantes.jpg" alt="Escuchar música" />
             <p>Escuchar música</p>
           </li>
-          <li class="hobbies-lista-series">
+          <li class="hobbies__lista__series">
             <img src="./public/images/seriesDeTv.jpg" alt="series de tv" />
             <p class="">Ver series</p>
           </li>
-          <li class="hobbies-lista-familia">
+          <li class="hobbies__lista-__familia">
             <img src="./public/images/familia.jpg" alt="ratos en familia" />
             <p class="">Pasar tiempo con la familia</p>
           </li>
-          <li class="hobbies-lista-experimentos">
+          <li class="hobbies__lista__experimentos">
             <img
               src="./public/images/experimentos.jpg"
               alt="hacer experimentos"
             />
             <p class="">Hacer experimentos</p>
           </li>
-          <li class="hobbies-lista-autoconocimiento">
+          <li class="hobbies__lista__autoconocimiento">
             <img src="./public/images/meditacion.jpg" alt="autoconocimiento" />
             <p class="">Conocerme cada día mas</p>
           </li>
-          <li class="hobbies-lista-paseo">
+          <li class="hobbies__lista__paseo">
             <img src="./public/images/pasear.jpg" alt="pasear" />
             <p class="">Dar paseos</p>
           </li>
@@ -279,60 +283,80 @@
       </section>
 
       <section id="formacion">
-        <h3 class="formacion-titulo">Formación Academica</h3>
-        <ul class="formacion-lista">
-          <li class="formacion-lista-items">
+        <h3 class="formacion__titulo">Formación Académica</h3>
+        <ul class="formacion__lista">
+          <a
+            class="formacion__lista__items"
+            href="./public/images/certificados/Augusto Sebastian Gonzale - Formación Desarrollo personal - Alura.jpg"
+            target="_blank"
+          >
             <img
               src="./public/images/certificados/Augusto Sebastian Gonzale - Formación Desarrollo personal - Alura.jpg"
               alt="Formacion Desarrollo Personal"
             />
             <p>Desarrollo Personal</p>
-          </li>
-          <li class="formacion-lista-items">
+          </a>
+          <a
+            class="formacion__lista__items"
+            href="./public/images/certificados/Augusto Sebastian Gonzale - Formación Business agility - Alura.jpg"
+            target="_blank"
+          >
             <img
               src="./public/images/certificados/Augusto Sebastian Gonzale - Formación Business agility - Alura.jpg"
               alt="Formacion Business Agility"
             />
             <p>Business Agility</p>
-          </li>
-          <li class="formacion-lista-items">
+          </a>
+          <a
+            class="formacion__lista__items"
+            href="./public/images/certificados/Augusto Sebastian Gonzale - Formación Principiante en programacion - Alura.png"
+            target="_blank"
+          >
             <img
               src="./public/images/certificados/Augusto Sebastian Gonzale - Formación Principiante en programacion - Alura.png"
               alt="Formacion Principiante en programacion"
             />
             <p>Principiante en programacion</p>
-          </li>
-          <li class="formacion-lista-items">
+          </a>
+          <a
+            class="formacion__lista__items"
+            href="./public/images/certificados/Augusto Sebastian Gonzale - Formación HTML & CSS - Alura.jpg"
+            target="_blank"
+          >
             <img
               src="./public/images/certificados/Augusto Sebastian Gonzale - Formación HTML & CSS - Alura.jpg"
               alt="Formacion HTML y CSS"
             />
             <p>HTML y CSS</p>
-          </li>
-          <li class="formacion-lista-items">
+          </a>
+          <a
+            class="formacion__lista__items"
+            href="./public/images/certificados/Augusto Sebastian Gonzale - Formación Frond End - Alura.jpg"
+            target="_blank"
+          >
             <img
               src="./public/images/certificados/Augusto Sebastian Gonzale - Formación Frond End - Alura.jpg"
               alt="Formacion Frond End"
             />
             <p>Frond End</p>
-          </li>
+          </a>
         </ul>
       </section>
 
-      <section id="experiencia-p">
-        <h3 class="experiencia-p__titulo">Experiencia Profesional</h3>
-        <ul class="experiencia-p__lista">
-          <li class="experiencia-p__item">
+      <section id="proyectos">
+        <h3 class="proyectos__titulo">Experiencia Profesional</h3>
+        <ul class="proyectos__lista">
+          <li class="proyectos__item">
             <img
               src="./public/images/alura-latam__challenge1.png"
               alt="codificador de texto"
             />
-            <div class="experiencia-p__descripcion">
-              <h6>Codificador/Descodificador de textos</h6>
+            <div class="proyectos__descripcion">
+              <h6>Codificador/Decodificador de textos</h6>
               <p>Challenge Alura Latam</p>
               <a
                 href="https://github.com/Seba-Gonzale/Challenge1AluraLatam"
-                class="experiencia-p__boton experiencia-p__boton--azul"
+                class="proyectos__boton proyectos__boton--azul"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -340,7 +364,7 @@
               </a>
               <a
                 href="https://seba-gonzale.github.io/Challenge1AluraLatam/"
-                class="experiencia-p__boton experiencia-p__boton--rosa"
+                class="proyectos__boton proyectos__boton--rosa"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -350,6 +374,47 @@
           </li>
           <li></li>
         </ul>
+      </section>
+
+      <section id="contacto">
+        <h3 class="contacto__titulo">Contacto</h3>
+        <div class="contacto__flex-container">
+          <form action="" class="contacto__formulario">
+            <label for="name">Correo electrónico</label>
+            <input
+              class="contacto__input-email"
+              type="email"
+              name="email"
+              placeholder="fulanito@gmail.com"
+            />
+            <label for="nombre">Nombre</label>
+            <input
+              class="contacto__input-nombre"
+              type="text"
+              name="nombre"
+              placeholder="fulanito"
+            />
+            <label for="asunto">Asunto</label>
+            <input
+              class="contacto__input-asunto"
+              type="text"
+              name="asunto"
+              placeholder="Quiero que te unas a mi equipo!"
+            />
+            <label for="mensaje">Mensaje</label>
+            <textarea
+              class="contacto__textarea-mensaje"
+              name="mensaje"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </form>
+          <img
+            class="contacto__imagen"
+            src="./public/images/email-recibido.png"
+            alt="email-recibido"
+          />
+        </div>
       </section>
     </main>
 
