@@ -1,0 +1,42 @@
+#formacion {
+  background-image: linear-gradient(
+    to bottom,
+    var(--backgroundColor),
+    transparent 100%
+  );
+  padding: var(--boxPadding);
+  padding-bottom: 7rem;
+  scroll-margin-top: 5rem; /* Esto hace que al moverse a ésta sección con el clic que se hace en la barra de navegacion, la barra no tape el titulo y se mueva un poco mas arriba*/
+}
+
+.formacion__titulo {
+  margin-bottom: 3rem;
+}
+
+.formacion__lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-evenly;
+}
+.formacion__lista__items {
+  flex: 0 0 300px;
+  text-align: center;
+  filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.4));
+  transition: all 0.2s;
+}
+.formacion__lista__items img {
+  width: 100%;
+}
+.formacion__lista__items:hover {
+  transform: scale(1.02);
+  filter: drop-shadow(7px 7px 10px rgba(0, 0, 0, 0.4));
+  cursor: pointer;
+}
+
+.formacion__lista__items p {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background-color: #fff;
+  border-radius: 10px;
+}

@@ -1,0 +1,47 @@
+#proyectos {
+  background-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    var(--backgroundColor) 100%
+  );
+  padding: var(--boxPadding);
+  padding-bottom: 5rem;
+  scroll-margin-top: 5rem; /* Esto hace que al moverse a ésta sección con el clic que se hace en la barra de navegacion, la barra no tape el titulo y se mueva un poco mas arriba*/
+}
+.proyectos__titulo {
+  margin-bottom: 3rem;
+}
+.proyectos__item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.proyectos__item img {
+  box-shadow: var(--boxShadow);
+  width: 66%;
+}
+.proyectos__descripcion {
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+}
+.proyectos__descripcion h6 {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.proyectos__boton {
+  display: inline-block;
+  width: 38%;
+  font-size: 1rem;
+  margin: 1rem;
+  padding: 1rem 0;
+  border: none;
+  border-radius: 10px;
+  box-shadow: var(--boxShadow);
+  border-left: inset 8px solid gray;
+}
+.proyectos__boton--azul {
+  background-color: aqua;
+}
+.proyectos__boton--rosa {
+  background-color: pink;
+}

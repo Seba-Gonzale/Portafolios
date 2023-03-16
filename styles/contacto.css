@@ -1,0 +1,46 @@
+#contacto {
+  background-image: linear-gradient(
+    to bottom,
+    var(--backgroundColor) 0%,
+    transparent 100%
+  );
+  padding: var(--boxPadding);
+  padding-bottom: 5rem;
+  scroll-margin-top: 5rem; /* Esto hace que al moverse a ésta sección con el clic que se hace en la barra de navegacion, la barra no tape el titulo y se mueva un poco mas arriba*/
+}
+.contacto__flex-container {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+.contacto__formulario {
+  display: flex;
+  flex-flow: column;
+
+  width: 50%;
+  line-height: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  padding: 1rem;
+}
+.contacto__formulario label {
+  font-family: "Courier New", Courier, monospace;
+}
+.contacto__formulario input {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+.contacto__formulario textarea {
+  resize: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.contacto__imagen {
+  object-fit: cover;
+  object-position: 100% 50%;
+  width: 50%;
+  border-radius: 20px;
+}

@@ -1,0 +1,66 @@
+#hobbies {
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    var(--backgroundColor) 100%
+  );
+  border-radius: 20px;
+  padding: var(--boxPadding);
+  padding-bottom: 10rem;
+  height: 70vw;
+  scroll-margin-top: 5rem; /* Esto hace que al moverse a ésta sección con el clic que se hace en la barra de navegacion, la barra no tape el titulo y se mueva un poco mas arriba*/
+}
+
+.hobbies__lista {
+  position: relative;
+  height: 100%;
+}
+.hobbies__lista li {
+  position: absolute;
+  background-color: #fafafa;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 8px 8px 15px 0 rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  width: 33%;
+}
+.hobbies__lista li img {
+  width: 100%;
+}
+.hobbies__lista li p {
+  padding: 1rem 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+}
+
+.hobbies__lista__musica {
+  top: 10%;
+  left: 3%;
+}
+.hobbies__lista__series {
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.hobbies__lista-__familia {
+  top: 15%;
+  left: 65%;
+}
+.hobbies__lista__autoconocimiento {
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.hobbies__lista__experimentos {
+  top: 50%;
+  left: 65%;
+}
+/* Utilizo 2 selectores para hacer mas peso entorno a las configuracion de (.hobbies__lista li) para modificar el width*/
+.hobbies__lista .hobbies__lista__paseo {
+  top: 48%;
+  left: 5%;
+}
+.hobbies__lista__paseo img {
+  height: 25vw;
+  object-fit: cover;
+  object-position: 50% 100%;
+}

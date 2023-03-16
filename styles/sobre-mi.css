@@ -1,0 +1,21 @@
+#sobre-mi {
+  background-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    var(--backgroundColor) 100%
+  );
+  padding: var(--boxPadding);
+  margin-top: 10rem;
+  padding-bottom: 5rem;
+  scroll-snap-align: center;
+  scroll-margin-top: 5rem; /* Esto hace que al moverse a ésta sección con el clic que se hace en la barra de navegacion, la barra no tape el titulo y se mueva un poco mas arriba*/
+}
+
+.sobre-mi__parrafos {
+  margin: 2rem 4rem;
+  font: 1rem Arial, Helvetica, sans-serif;
+  line-height: 1.5rem;
+}
+.sobre-mi__parrafos > p {
+  text-indent: 2rem;
+}

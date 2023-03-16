@@ -1,0 +1,62 @@
+#skills {
+  background-image: linear-gradient(
+    to bottom,
+    var(--backgroundColor),
+    transparent 100%
+  );
+  border-radius: 20px;
+  padding: var(--boxPadding);
+  padding-bottom: 5rem;
+  scroll-margin-top: 5rem; /* Esto hace que al moverse a ésta sección con el clic que se hace en la barra de navegacion, la barra no tape el titulo y se mueva un poco mas arriba*/
+}
+
+.skills__lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
+
+  margin: 2rem;
+  text-align: center;
+}
+.skills__icons {
+  filter: drop-shadow(6px 6px 6px gray);
+  width: 80px;
+  height: 80px;
+}
+.skills__ul__etiqueta {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.skills__ul__react {
+  position: relative;
+}
+.skills__learning {
+  position: absolute;
+  font-weight: bold;
+  font-size: 1rem;
+  top: 30%;
+  right: 10%;
+}
+
+.skills__icon--react,
+.etiqueta-react {
+  filter: grayscale(100%);
+  opacity: 0.3;
+}
+
+.skills__soft-skills-titulo {
+  font-size: 1.5rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.skills__soft-skills-lista {
+  align-items: flex-start;
+}

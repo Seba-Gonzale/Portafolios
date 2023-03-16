@@ -1,0 +1,54 @@
+.presentacion {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  padding: var(--boxPadding);
+  margin: 6rem 0;
+}
+
+.presentacion__perfil__imagen {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 0% 0%;
+  box-shadow: 0px 2px 10px 0 gray;
+  filter: brightness(120%);
+}
+
+.presentacion__texto {
+  flex: 1 0 300px;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.presentacion__texto-titulo {
+  font: bolder 2rem Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  text-shadow: 0px 2px 2px var(--boxShadow);
+}
+
+.presentacion__texto-parrafo {
+  font: 1rem Arial, Helvetica, sans-serif;
+  line-height: 1.5rem;
+}
+
+.redes-de-contacto {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 20px;
+
+  padding-top: 1rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 0.9rem;
+}
+
+.github-icon,
+.instagram-icon,
+.linkedin-icon,
+.curriculum-icon {
+  height: 50px;
+}
