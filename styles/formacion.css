@@ -6,7 +6,9 @@
   );
   padding: var(--boxPadding);
   padding-bottom: 7rem;
-  scroll-margin-top: 5rem; /* Esto hace que al moverse a ésta sección con el clic que se hace en la barra de navegacion, la barra no tape el titulo y se mueva un poco mas arriba*/
+  scroll-margin-top: var(
+    --scroll-margin-top
+  ); /* Esto hace que al moverse a ésta sección con el clic que se hace en la barra de navegacion, la barra no tape el titulo y se mueva un poco mas arriba*/
 }
 
 .formacion__titulo {
@@ -39,4 +41,10 @@
   padding: 0.5rem;
   background-color: #fff;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .formacion__lista__items {
+    flex-basis: 40%;
+  }
 }

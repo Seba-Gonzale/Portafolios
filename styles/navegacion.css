@@ -1,3 +1,5 @@
+@import "../styles.css";
+
 .navegacion {
   display: flex;
   flex-wrap: wrap;
@@ -34,6 +36,10 @@
   font-style: italic;
 }
 
+menu-icon {
+  display: none;
+}
+
 .menu {
   flex: 1 1 auto;
 
@@ -58,10 +64,40 @@
   color: #00412b;
 }
 
-@media screen and (max-width: 992px) {
-  .menu {
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  :root {
+    --scroll-margin-top: 8rem;
+  }
+  .navegacion {
     display: block;
-    height: 1rem;
-    overflow: hidden;
+  }
+  .logo {
+    justify-content: center;
+  }
+  .menu {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  :root {
+    --scroll-margin-top: 10rem;
+  }
+  .menu {
+    display: none;
+    justify-content: space-evenly;
+    line-height: 0;
+  }
+  .menu__item {
+    margin: 0.5rem 0.5rem 0;
+  }
+  menu-icon {
+    display: block;
+    position: relative;
+    bottom: 5px;
+    font-size: 2rem;
+  }
+  menu-icon:hover {
+    cursor: pointer;
   }
 }

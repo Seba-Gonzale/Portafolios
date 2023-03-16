@@ -1,11 +1,12 @@
 .presentacion {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   gap: 20px;
 
   padding: var(--boxPadding);
-  margin: 6rem 0;
+  margin: 6vh 0;
+  height: 80vh; /* este height sumado con margin-top y margin-bottom da 92vh necesarios para despejar y centrar el elemento presentacion*/
 }
 
 .presentacion__perfil__imagen {
@@ -52,3 +53,27 @@
 .curriculum-icon {
   height: 50px;
 }
+
+/* Este media sirve tanto para min-width: 480px como para 768px*/
+@media screen and (min-width: 480px) and (max-width: 991px) {
+  .presentacion {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .presentacion__perfil {
+    text-align: center;
+  }
+
+  .presentacion__texto {
+    flex: 0 0 300px;
+  }
+
+  .presentacion .presentacion__texto-titulo {
+    flex-basis: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+/* @media screen and (min-width: 480px) and (max-width: 767px) {
+} */

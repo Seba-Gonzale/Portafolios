@@ -6,7 +6,9 @@
   );
   padding: var(--boxPadding);
   padding-bottom: 5rem;
-  scroll-margin-top: 5rem; /* Esto hace que al moverse a ésta sección con el clic que se hace en la barra de navegacion, la barra no tape el titulo y se mueva un poco mas arriba*/
+  scroll-margin-top: var(
+    --scroll-margin-top
+  ); /* Esto hace que al moverse a ésta sección con el clic que se hace en la barra de navegacion, la barra no tape el titulo y se mueva un poco mas arriba*/
 }
 .proyectos__titulo {
   margin-bottom: 3rem;

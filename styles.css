@@ -4,6 +4,7 @@
   --boxShadow: 8px 8px 15px 0 rgba(0, 0, 0, 0.4);
   --boxPadding: 0 10vw;
   --textColor: #111;
+  --scroll-margin-top: 5rem;
 }
 
 html {

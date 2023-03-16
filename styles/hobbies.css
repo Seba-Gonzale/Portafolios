@@ -1,14 +1,16 @@
 #hobbies {
   background-image: linear-gradient(
     to bottom,
-    transparent,
+    transparent 0%,
     var(--backgroundColor) 100%
   );
   border-radius: 20px;
   padding: var(--boxPadding);
   padding-bottom: 10rem;
   height: 70vw;
-  scroll-margin-top: 5rem; /* Esto hace que al moverse a ésta sección con el clic que se hace en la barra de navegacion, la barra no tape el titulo y se mueva un poco mas arriba*/
+  scroll-margin-top: var(
+    --scroll-margin-top
+  ); /* Esto hace que al moverse a ésta sección con el clic que se hace en la barra de navegacion, la barra no tape el titulo y se mueva un poco mas arriba*/
 }
 
 .hobbies__lista {
@@ -41,7 +43,7 @@
   left: 50%;
   transform: translate(-50%, 0%);
 }
-.hobbies__lista-__familia {
+.hobbies__lista__familia {
   top: 15%;
   left: 65%;
 }
@@ -63,4 +65,46 @@
   height: 25vw;
   object-fit: cover;
   object-position: 50% 100%;
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  #hobbies {
+    height: auto;
+  }
+  .hobbies__titulo {
+    margin-bottom: 1rem;
+  }
+  .hobbies__lista li {
+    position: static;
+    width: 50%;
+    transform: none;
+    /* margin: 1rem; */
+    /* top: 100%; */
+  }
+  .hobbies__lista__musica {
+    margin-left: 2%;
+  }
+  .hobbies__lista__series {
+    margin-top: -13%;
+    margin-left: 46%;
+  }
+  .hobbies__lista__familia {
+    margin-top: -13%;
+    margin-left: 0%;
+  }
+  .hobbies__lista__experimentos {
+    margin-top: -13%;
+    margin-left: 48%;
+  }
+  .hobbies__lista__autoconocimiento {
+    margin-top: -23%;
+    margin-left: 2%;
+  }
+  .hobbies__lista__paseo {
+    margin-top: -53%;
+    margin-left: 49%;
+  }
+  .hobbies__lista__paseo img {
+    height: auto;
+  }
 }

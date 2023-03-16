@@ -39,7 +39,8 @@
         </a>
       </div>
 
-      <ul class="menu">
+      <menu-icon data-botonMenu>&#9776;</menu-icon>
+      <ul class="menu" data-menu>
         <li class="menu__item">
           <a class="menu__item__link" href="#sobre-mi">Sobre mi</a>
         </li>
@@ -269,7 +270,7 @@
             <img src="./public/images/seriesDeTv.jpg" alt="series de tv" />
             <p class="">Ver series</p>
           </li>
-          <li class="hobbies__lista-__familia">
+          <li class="hobbies__lista__familia">
             <img src="./public/images/familia.jpg" alt="ratos en familia" />
             <p class="">Pasar tiempo con la familia</p>
           </li>
@@ -418,11 +419,7 @@
               rows="10"
             ></textarea>
           </form>
-          <img
-            class="contacto__imagen"
-            src="./public/images/email-recibido.png"
-            alt="email-recibido"
-          />
+          <div class="contacto__imagen"></div>
         </div>
       </section>
     </main>
@@ -434,5 +431,7 @@
       icon by
       <a target="_blank" href="https://icons8.com">Icons8</a>
     </div>
+
+    <script src="./scripts-controllers/boton-menu.js"></script>
   </body>
 </html>
