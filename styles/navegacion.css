@@ -101,3 +101,32 @@ menu-icon {
     cursor: pointer;
   }
 }
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  :root {
+    --scroll-margin-top: 10rem;
+  }
+  .logo__nombre-completo {
+    display: none;
+  }
+  .logo__iniciales {
+    font-size: 2rem;
+  }
+  .menu {
+    display: none;
+    justify-content: space-evenly;
+    line-height: 0;
+  }
+  .menu__item {
+    margin: 0.5rem 0.5rem 0;
+  }
+  menu-icon {
+    display: block;
+    position: relative;
+    bottom: 5%;
+    font-size: 1.5rem;
+  }
+  menu-icon:hover {
+    cursor: pointer;
+  }
+}

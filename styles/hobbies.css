@@ -78,8 +78,6 @@
     position: static;
     width: 50%;
     transform: none;
-    /* margin: 1rem; */
-    /* top: 100%; */
   }
   .hobbies__lista__musica {
     margin-left: 2%;
@@ -103,6 +101,31 @@
   .hobbies__lista__paseo {
     margin-top: -53%;
     margin-left: 49%;
+  }
+  .hobbies__lista__paseo img {
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  #hobbies {
+    height: auto;
+  }
+  .hobbies__lista {
+    display: flex;
+    flex-direction: column;
+  }
+  .hobbies__lista li {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin: 20px 0;
+  }
+  .hobbies__lista__paseo {
+    order: 1;
+  }
+  .hobbies__lista__autoconocimiento {
+    order: 2;
   }
   .hobbies__lista__paseo img {
     height: auto;

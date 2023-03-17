@@ -47,3 +47,32 @@
 .proyectos__boton--rosa {
   background-color: pink;
 }
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .proyectos__item {
+    flex-direction: column;
+  }
+  .proyectos__item img {
+    width: 80vw;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .proyectos__item {
+    flex-direction: column;
+  }
+  .proyectos__item img {
+    width: 90vw;
+  }
+  .proyectos__descripcion {
+    width: 90vw;
+  }
+  .proyectos__descripcion h6 {
+    font-size: 1rem;
+  }
+  .proyectos__boton {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
