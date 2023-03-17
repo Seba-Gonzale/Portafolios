@@ -8,7 +8,6 @@
   );
   padding: var(--boxPadding);
   padding-bottom: 5rem;
-  scroll-margin-top: 5rem; /* Esto hace que al moverse a ésta sección con el clic que se hace en la barra de navegacion, la barra no tape el titulo y se mueva un poco mas arriba*/
 }
 .autobiografia__titulo {
   margin: 3rem 0 0;
@@ -27,4 +26,16 @@
 .autobiografia__parrafos {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .autobiografia__imagen {
+    float: none;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .autobiografia__imagen {
+    width: 100%;
+  }
 }
