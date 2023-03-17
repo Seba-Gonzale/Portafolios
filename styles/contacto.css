@@ -47,6 +47,20 @@
   background-size: cover;
   background-position: 90% 0;
 }
+.contacto__boton--enviar {
+  width: fit-content;
+  background-color: white;
+  margin-top: 1rem;
+  padding: 0.5rem 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 0px 0 rgba(0, 0, 0, 0.4);
+  transition: transform 0s, box-shadow 0s;
+}
+.contacto__boton--enviar:active {
+  transform: scale(80%, 80%);
+  box-shadow: none;
+}
 
 @media screen and (min-width: 992px) and (max-width: 1023px) {
   .contacto__imagen {
