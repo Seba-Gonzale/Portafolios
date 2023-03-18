@@ -398,7 +398,7 @@
               type="email"
               name="email"
               placeholder="fulanito@gmail.com"
-              pattern="/^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/"
+              pattern="^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$"
             />
             <label for="nombre">Nombre</label>
             <input
@@ -407,6 +407,7 @@
               type="text"
               name="nombre"
               placeholder="fulanito"
+              pattern="^(?=.{1,50}$)[a-zA-Z ]+$"
             />
             <label for="asunto">Asunto</label>
             <input

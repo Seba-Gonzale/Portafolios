@@ -15,7 +15,7 @@
 
 .sobre-mi__parrafos {
   margin: 2rem 5vw;
-  font: 1rem Arial, Helvetica, sans-serif;
+  font: 1rem Arial, Helvetica, "sans-serif";
   line-height: 1.5rem;
 }
 .sobre-mi__parrafos > p {
@@ -26,6 +26,5 @@
   .sobre-mi__parrafos {
     margin-left: 0;
     margin-right: 0;
-    font-size: 0.8rem;
   }
 }

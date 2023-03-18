@@ -27,7 +27,7 @@
   padding: 1rem;
 }
 .contacto__formulario label {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .contacto__formulario input {
   border: 1px solid rgba(0, 0, 0, 0.3);
@@ -90,6 +90,7 @@
     border-radius: 20px;
   }
   .contacto__formulario {
+    box-sizing: border-box;
     width: 100%;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.7);
