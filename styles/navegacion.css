@@ -1,6 +1,6 @@
 @import "../styles.css";
 
-.navegacion {
+#navegacion {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -12,6 +12,7 @@
   background-color: var(--backgroundColor);
   border-radius: 0 0 20px 20px;
   box-shadow: var(--boxShadow);
+  transition: all 1s;
 }
 
 .logo {

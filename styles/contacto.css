@@ -62,6 +62,10 @@
   box-shadow: 0 4px 0px 0 rgba(0, 0, 0, 0.4);
   transition: transform 0s, box-shadow 0s;
 }
+.contacto__boton--enviar:hover {
+  background-color: var(--backgroundColor);
+  cursor: pointer;
+}
 .contacto__boton--enviar:active {
   transform: scale(80%, 80%);
   box-shadow: none;

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./public/ASG.ico" />
 
     <!-- Hojas de estilo -->
     <link rel="stylesheet" href="./reset.css" />
@@ -30,7 +31,7 @@
   </head>
 
   <body>
-    <nav class="navegacion">
+    <nav id="navegacion">
       <div class="logo">
         <a href="#">
           <h1 class="logo__iniciales">ASG</h1>
@@ -107,7 +108,7 @@
               rel="noopener noreferrer"
             >
               <img
-                class="github-icon"
+                class="github-icon redes-icons"
                 src="./public/images/github-icon.svg"
                 alt="github"
                 height="75"
@@ -121,7 +122,7 @@
               rel="noopener noreferrer"
             >
               <img
-                class="instagram-icon"
+                class="instagram-icon redes-icons"
                 src="./public/images/instagram-icon.svg"
                 alt="instagram"
                 height="75"
@@ -135,7 +136,7 @@
               rel="noopener noreferrer"
             >
               <img
-                class="linkedin-icon"
+                class="linkedin-icon redes-icons"
                 src="./public/images/linkedin-icon.svg"
                 alt="linkedin"
                 height="75"
@@ -149,7 +150,7 @@
               rel="noopener noreferrer"
             >
               <img
-                class="curriculum-icon"
+                class="curriculum-icon redes-icons"
                 src="./public/images/curriculumVitae-icon.png"
                 alt="curriculum vitae"
                 height="75"
@@ -434,6 +435,7 @@
               >Mensaje (max: 300) <span class="contacto__contador"></span
             ></label>
             <textarea
+              required
               class="contacto__textarea-mensaje"
               name="mensaje"
               cols="30"
