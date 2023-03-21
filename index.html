@@ -390,16 +390,23 @@
       <section id="contacto">
         <h3 class="contacto__titulo">Contacto</h3>
         <div class="contacto__flex-container">
-          <form action="" class="contacto__formulario">
-            <label for="name">Correo electrónico</label>
+          <form
+            action=""
+            class="contacto__formulario"
+            data-contacto__formulario
+          >
+            <label for="email">Correo electrónico</label>
             <input
               required
               class="contacto__input-email"
               type="email"
               name="email"
               placeholder="fulanito@gmail.com"
-              pattern="^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$"
+              pattern="^[-\w.]+@([-\w]+\.)*[-\w]{2,4}$"
+              title="Inserte un correo electrónico válido"
             />
+            <p class="contacto__input-email-error contacto__mensaje-error"></p>
+
             <label for="nombre">Nombre</label>
             <input
               required
@@ -407,27 +414,37 @@
               type="text"
               name="nombre"
               placeholder="fulanito"
-              pattern="^(?=.{1,50}$)[a-zA-Z ]+$"
+              pattern="^[a-zA-Z ]+$"
+              maxlength="50"
             />
+            <p class="contacto__input-nombre-error contacto__mensaje-error"></p>
+
             <label for="asunto">Asunto</label>
             <input
+              required
               class="contacto__input-asunto"
               type="text"
               name="asunto"
               placeholder="Quiero que te unas a mi equipo!"
+              maxlength="50"
             />
-            <label for="mensaje">Mensaje</label>
+            <p class="contacto__input-asunto-error contacto__mensaje-error"></p>
+
+            <label for="mensaje"
+              >Mensaje (max: 300) <span class="contacto__contador"></span
+            ></label>
             <textarea
               class="contacto__textarea-mensaje"
               name="mensaje"
               cols="30"
               rows="10"
+              maxlength="300"
             ></textarea>
-            <button
-              class="contacto__boton--enviar"
-              type="submit"
-              data-contacto__boton-enviar
-            >
+            <p
+              class="contacto__textarea-mensaje-error contacto__mensaje-error"
+            ></p>
+
+            <button class="contacto__boton--enviar" type="submit">
               Enviar
             </button>
           </form>

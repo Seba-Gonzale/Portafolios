@@ -29,6 +29,11 @@
 .contacto__formulario label {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+.contacto__contador {
+  float: right;
+  color: blue;
+  font-weight: bold;
+}
 .contacto__formulario input {
   border: 1px solid rgba(0, 0, 0, 0.3);
   padding: 0.5rem;
@@ -37,7 +42,7 @@
 .contacto__formulario textarea {
   resize: none;
   border: 1px solid rgba(0, 0, 0, 0.3);
-  padding: 0.5rem;
+  padding: 0.5rem 0.5rem 1.5rem;
   border-radius: 10px;
 }
 
@@ -96,15 +101,10 @@
     background-color: rgba(255, 255, 255, 0.7);
   }
 }
-/* @media screen and (min-width: 480px) and (max-width: 767px) {
-  .contacto__formulario {
-    
-  }
-} */
 
-/* @media screen and (min-width: 320px) and (max-width: 479px) {
-  .contacto__formulario {
-    box-sizing: border-box;
-    width: 100%;
-  }
-} */
+/* error manejado por validacion-formulario.js */
+
+.contacto__mensaje-error {
+  display: none;
+  color: red;
+}
