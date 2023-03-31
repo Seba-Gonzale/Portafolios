@@ -13,9 +13,9 @@ const contadorTextarea = contacto__formulario.querySelector(
   ".contacto__contador"
 );
 
-//  inserción de eventos en los elementos html
 inputsFormulario.push(textAreaHtml);
 
+//  inserción de eventos en los elementos html
 inputsFormulario.forEach((input) => {
   input.addEventListener("blur", (event) => validacion(event.target));
 });
