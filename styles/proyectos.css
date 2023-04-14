@@ -16,13 +16,15 @@
 .proyectos__item {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
+  margin-bottom: 1rem;
 }
 .proyectos__item img {
   box-shadow: var(--boxShadow);
-  width: 66%;
+  width: 50%;
 }
 .proyectos__descripcion {
+  width: 50%;
   font-family: "Courier New", Courier, monospace;
   text-align: center;
 }
