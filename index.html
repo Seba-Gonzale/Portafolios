@@ -27,6 +27,31 @@
       rel="stylesheet"
     />
 
+    <!-- Formulario de contacto -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+    <script type="text/javascript" defer>
+            (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "sfVINC4xtNRT5uWcv",
+            });
+        })();
+    </script>
+      <script type="text/javascript">
+        window.onload = function() {
+          document.getElementById('contacto').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // these IDs from the previous steps
+            emailjs.sendForm('contact_service', 'contacto', this)
+              .then(() => {
+                  console.log('SUCCESS!');
+              }, (error) => {
+                  console.log('FAILED...', error);
+              });
+          });
+        }
+      </script>
+
     <title>A. Sebastian Gonzale</title>
   </head>
 
@@ -422,48 +447,48 @@
             class="contacto__formulario"
             data-contacto__formulario
           >
-            <label for="email">Correo electrónico</label>
+            <label for="user_email">Correo electrónico</label>
             <input
               required
               class="contacto__input-email"
               type="email"
-              name="email"
+              name="user_email"
               placeholder="fulanito@gmail.com"
               pattern="^[-\w.]+@([-\w]+\.)*[-\w]{2,4}$"
               title="Inserte un correo electrónico válido"
             />
             <p class="contacto__input-email-error contacto__mensaje-error"></p>
 
-            <label for="nombre">Nombre</label>
+            <label for="user_name">Nombre</label>
             <input
               required
               class="contacto__input-nombre"
               type="text"
-              name="nombre"
+              name="user_name"
               placeholder="fulanito"
               pattern="^[a-zA-Z ]+$"
               maxlength="50"
             />
             <p class="contacto__input-nombre-error contacto__mensaje-error"></p>
 
-            <label for="asunto">Asunto</label>
+            <label for="user_subject">Asunto</label>
             <input
               required
               class="contacto__input-asunto"
               type="text"
-              name="asunto"
+              name="user_subject"
               placeholder="Quiero que te unas a mi equipo!"
               maxlength="50"
             />
             <p class="contacto__input-asunto-error contacto__mensaje-error"></p>
 
-            <label for="mensaje"
+            <label for="message"
               >Mensaje (max: 300) <span class="contacto__contador"></span
             ></label>
             <textarea
               required
               class="contacto__textarea-mensaje"
-              name="mensaje"
+              name="message"
               cols="30"
               rows="10"
               maxlength="300"
