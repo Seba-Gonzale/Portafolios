@@ -41,8 +41,9 @@
       window.onload = function() {
         document.getElementById('contacto').addEventListener('submit', function(event) {
           event.preventDefault();
+          const formulario = this
           // these IDs from the previous steps
-          emailjs.sendForm('service_t3jl3di', 'contact_form', this)
+          emailjs.sendForm('service_t3jl3di', 'contact_form', formulario)
             .then(() => {
                 console.log('SUCCESS!');
             }, (error) => {
