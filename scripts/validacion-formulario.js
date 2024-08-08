@@ -24,24 +24,6 @@ contacto__boton.addEventListener("click", () => {
   inputsFormulario.forEach((input) => validacion(input));
 });
 
-// procedimientos de validacion
-function validacion(input) {
-  // liberamos el valor del input de espacios para que no pase la validación si solo hay espacios vacios
-  input.value = input.value.trim();
-  // A elementError se le asigna el elemnto <p> que muestra el error
-  const elementError = contacto__formulario.querySelector(
-    `.${input.classList[0] + "-error"}`
-  );
-  // si no es valido el input, se muestra el msj de error
-  if (!input.checkValidity()) {
-    elementError.textContent = inputErrorMessage(input);
-    elementError.style.display = "block";
-  } else {
-    // si el input es valido se oculta el msj de error
-    elementError.style.display = "none";
-  }
-}
-
 // Objeto con mensajes personalizados segun el error obtenido
 const messageType = {
   valueMissing: {
