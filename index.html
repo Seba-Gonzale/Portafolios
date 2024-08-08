@@ -37,22 +37,22 @@
             });
         })();
     </script>
-      <script type="text/javascript">
-        window.onload = function() {
-          document.getElementById('contacto').addEventListener('submit', function(event) {
-            event.preventDefault();
-            // these IDs from the previous steps
-            emailjs.sendForm('contact_service', 'contacto', this)
-              .then(() => {
-                  console.log('SUCCESS!');
-              }, (error) => {
-                  console.log('FAILED...', error);
-              });
-          });
-        }
-      </script>
+    <script type="text/javascript">
+      window.onload = function() {
+        document.getElementById('contacto').addEventListener('submit', function(event) {
+          event.preventDefault();
+          // these IDs from the previous steps
+          emailjs.sendForm('contact_service', 'contacto', this)
+            .then(() => {
+                console.log('SUCCESS!');
+            }, (error) => {
+                console.log('FAILED...', error);
+            });
+        });
+      }
+    </script>
 
-    <title>A. Sebastian Gonzale</title>
+    <title>A.S.G.</title>
   </head>
 
   <body>
