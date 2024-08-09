@@ -5,21 +5,24 @@
   --boxPadding: 0 10vw;
   --textColor: #111;
   --scroll-margin-top: 5rem;
+  --botonColor: #86efac;
+  --botonColor2: #5eead4;
+  --brightness: brightness(1);
 }
 
 * {
   font-size: 16px;
+  box-sizing: border-box;
 }
 
 html {
-  box-sizing: border-box;
   height: 100vh;
-  color: var(--textColor);
   scroll-behavior: smooth;
 }
 body {
   min-height: 100%;
   background-color: var(--backgroundColorBody);
+  color: var(--textColor);
 }
 a {
   color: var(--textColor);
@@ -36,4 +39,42 @@ b {
 }
 h3 {
   font: bold 2rem Georgia;
+}
+
+.spinner-block {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #3498db; /* Color del borde superior */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+.spinner-inline-block {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #3498db; /* Color del borde superior */
+  border-radius: 50%;
+  animation: spin 1s infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.dark-mode {
+  --backgroundColorBody: #0c0a09;
+  --backgroundColor: #052e16;
+  --boxShadow: 8px 8px 15px 0 rgba(0, 0, 0, 0.4);
+  --textColor: #ccc;
+  --botonColor: #115e59;
+  --botonColor2: #15803d;
+  --brightness: brightness(0.8);
 }

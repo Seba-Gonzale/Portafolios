@@ -29,6 +29,7 @@
 }
 .formacion__lista__items img {
   width: 100%;
+  filter: var(--brightness);
 }
 .formacion__lista__items:hover {
   transform: scale(1.02);
@@ -39,7 +40,7 @@
 .formacion__lista__items p {
   margin-top: 0.5rem;
   padding: 0.5rem;
-  background-color: #fff;
+  background-color: var(--backgroundColorBody);
   border-radius: 10px;
 }
 

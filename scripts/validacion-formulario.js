@@ -2,7 +2,9 @@
 const contacto__formulario = document.querySelector(
   "[data-contacto__formulario]"
 );
-const inputsFormulario = [...contacto__formulario.querySelectorAll("input")];
+const inputsFormulario = [
+  ...contacto__formulario.querySelectorAll('input:not([type="hidden"])'),
+];
 const textAreaHtml = contacto__formulario.querySelector(
   ".contacto__textarea-mensaje"
 );
@@ -12,12 +14,18 @@ const contacto__boton = contacto__formulario.querySelector(
 const contadorTextarea = contacto__formulario.querySelector(
   ".contacto__contador"
 );
-
-contacto__formulario.addEventListener("submit", (e) => {
-  e.preventDefault();
-});
+const contact__spinner =
+  contacto__formulario.querySelector(".contacto__spinner");
 
 inputsFormulario.push(textAreaHtml);
+
+//  limpieza de los campos al enviar el formulario
+export function clearForm() {
+  contact__spinner.classList.toggle("contacto__spinner");
+  inputsFormulario.forEach((element) => {
+    element.value = "";
+  });
+}
 
 //  inserción de eventos en los elementos html
 inputsFormulario.forEach((input) => {
@@ -25,6 +33,7 @@ inputsFormulario.forEach((input) => {
 });
 
 contacto__boton.addEventListener("click", (e) => {
+  contact__spinner.classList.toggle("contacto__spinner");
   inputsFormulario.forEach((input) => validacion(input));
 });
 

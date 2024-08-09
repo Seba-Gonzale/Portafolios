@@ -38,12 +38,16 @@
   border: 1px solid rgba(0, 0, 0, 0.3);
   padding: 0.5rem;
   border-radius: 10px;
+  background-color: var(--backgroundColorBody);
+  color: var(--textColor);
 }
 .contacto__formulario textarea {
   resize: none;
   border: 1px solid rgba(0, 0, 0, 0.3);
   padding: 0.5rem 0.5rem 1.5rem;
   border-radius: 10px;
+  background-color: var(--backgroundColorBody);
+  color: var(--textColor);
 }
 
 .contacto__imagen {
@@ -51,11 +55,11 @@
   background-image: url("../public/images/email-recibido.png");
   background-size: cover;
   background-position: 90% 0;
+  filter: var(--brightness);
 }
 .contacto__boton--enviar {
   width: fit-content;
   background-color: white;
-  margin-top: 1rem;
   padding: 0.5rem 2rem;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -65,10 +69,15 @@
 .contacto__boton--enviar:hover {
   background-color: var(--backgroundColor);
   cursor: pointer;
+  color: var(--textColor);
 }
 .contacto__boton--enviar:active {
   transform: scale(80%, 80%);
   box-shadow: none;
+}
+
+.contacto__spinner {
+  display: none;
 }
 
 @media screen and (min-width: 992px) and (max-width: 1023px) {
@@ -80,11 +89,12 @@
     background-size: cover;
     background-position: 90% 45%;
     border-radius: 20px;
+    filter: var(--brightness);
   }
   .contacto__formulario {
     width: 50%;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -97,12 +107,13 @@
     background-size: cover;
     background-position: 90% 0;
     border-radius: 20px;
+    filter: var(--brightness);
   }
   .contacto__formulario {
     box-sizing: border-box;
     width: 100%;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }
 

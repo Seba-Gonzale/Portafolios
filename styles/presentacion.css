@@ -6,7 +6,7 @@
 
   padding: var(--boxPadding);
   margin: 6vh 0;
-  height: 80vh; /* este height sumado con margin-top y margin-bottom da 92vh necesarios para despejar y centrar el elemento presentacion*/
+  /* height: 80vh; este height sumado con margin-top y margin-bottom da 92vh necesarios para despejar y centrar el elemento presentacion */
   transition: all 0.5s;
 }
 
@@ -52,21 +52,21 @@
   height: 50px;
   transition: transform 0.2s;
 }
+.github-icon {
+  border-radius: 50%;
+  background-color: var(--textColor);
+}
 .redes-icons:hover {
   transform: translate(0%, -10%);
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .presentacion {
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
   }
   .presentacion__perfil {
     text-align: center;
-  }
-
-  .presentacion__texto {
-    flex: 0 0 300px;
   }
 
   .presentacion .presentacion__texto-titulo {

@@ -22,6 +22,7 @@
 .proyectos__item img {
   box-shadow: var(--boxShadow);
   width: 50%;
+  filter: var(--brightness);
 }
 .proyectos__descripcion {
   width: 50%;
@@ -35,9 +36,10 @@
 .proyectos__boton {
   display: inline-block;
   width: 38%;
+  min-width: fit-content;
   font-size: 1rem;
   margin: 1rem;
-  padding: 1rem 0;
+  padding: 1rem;
   border: none;
   border-radius: 10px;
   box-shadow: var(--boxShadow);
@@ -49,10 +51,10 @@
   box-shadow: 8px 8px 20px 0 rgba(0, 0, 0, 0.4);
 }
 .proyectos__boton--azul {
-  background-color: aqua;
+  background-color: var(--botonColor);
 }
 .proyectos__boton--rosa {
-  background-color: pink;
+  background-color: var(--botonColor2);
 }
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
