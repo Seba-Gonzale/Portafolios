@@ -28,29 +28,35 @@
     />
 
     <!-- Formulario de contacto -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
     <script type="text/javascript">
-            (function() {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init({
-              publicKey: "sfVINC4xtNRT5uWcv",
-            });
-        })();
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "sfVINC4xtNRT5uWcv",
+        });
+      })();
     </script>
     <script type="text/javascript">
-      window.onload = function() {
-        document.getElementById('contacto').addEventListener('submit', function(event) {
-          event.preventDefault();
-          const formulario = this
-          // these IDs from the previous steps
-          emailjs.sendForm('service_t3jl3di', 'contact_form', formulario)
-            .then(() => {
-                console.log('SUCCESS!');
-            }, (error) => {
-                console.log('FAILED...', error);
-            });
-        });
-      }
+      window.onload = function () {
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            // these IDs from the previous steps
+            emailjs.sendForm("service_t3jl3di", "contact_form", this).then(
+              () => {
+                console.log("SUCCESS!");
+              },
+              (error) => {
+                console.log("FAILED...", error);
+              }
+            );
+          });
+      };
     </script>
 
     <title>A.S.G.</title>
@@ -445,9 +451,18 @@
         <div class="contacto__flex-container">
           <form
             action=""
+            id="contact-form"
             class="contacto__formulario"
             data-contacto__formulario
           >
+            <input
+              type="hidden"
+              name="my_name"
+              class="contacto__input-hidden"
+              value="Sebastian"
+            />
+            <p class="contacto__input-hidden-error contacto__mensaje-error"></p>
+
             <label for="input-email">Correo electrónico</label>
             <input
               required
@@ -476,7 +491,7 @@
             <label for="input-subject">Asunto</label>
             <input
               required
-              id="input-subject
+              id="input-subject"
               class="contacto__input-asunto"
               type="text"
               name="user_subject"
@@ -485,7 +500,7 @@
             />
             <p class="contacto__input-asunto-error contacto__mensaje-error"></p>
 
-            <label for="message"
+            <label for="textarea-message"
               >Mensaje (max: 300) <span class="contacto__contador"></span
             ></label>
             <textarea
@@ -504,6 +519,12 @@
             <button class="contacto__boton--enviar" type="submit">
               Enviar
             </button>
+            <div style="margin: 10px">
+              Servicio de correo electrónico:
+              <a href="https://www.emailjs.com/" target="_blank"
+                ><u>EmailJS</u></a
+              >
+            </div>
           </form>
           <div class="contacto__imagen"></div>
         </div>
