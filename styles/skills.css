@@ -4,7 +4,6 @@
     var(--backgroundColor),
     transparent 100%
   );
-  border-radius: 20px;
   padding: var(--boxPadding);
   padding-bottom: 5rem;
   scroll-margin-top: var(
@@ -24,7 +23,7 @@
   text-align: center;
 }
 .skills__icons {
-  filter: drop-shadow(6px 6px 6px gray);
+  filter: drop-shadow(6px 6px 6px gray) var(--brightness);
   width: 80px;
   height: 80px;
 }

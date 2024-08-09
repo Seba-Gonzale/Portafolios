@@ -4,7 +4,6 @@
     transparent 0%,
     var(--backgroundColor) 100%
   );
-  border-radius: 20px;
   padding: var(--boxPadding);
   padding-bottom: 10rem;
   height: 70vw;
@@ -19,7 +18,7 @@
 }
 .hobbies__lista li {
   position: absolute;
-  background-color: #fafafa;
+  background-color: var(--backgroundColorBody);
   border-radius: 30px;
   text-align: center;
   box-shadow: 8px 8px 15px 0 rgba(0, 0, 0, 0.4);
@@ -28,6 +27,7 @@
 }
 .hobbies__lista li img {
   width: 100%;
+  filter: var(--brightness);
 }
 .hobbies__lista li p {
   padding: 1rem 0;

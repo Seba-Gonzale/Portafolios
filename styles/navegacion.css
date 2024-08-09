@@ -33,7 +33,8 @@
 }
 .logo__nombre-completo {
   display: inline-block;
-  font: 1.2rem Georgia, "Allura", cursive;
+  font: 1.5rem serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-style: italic;
 }
 
@@ -58,11 +59,18 @@ menu-icon {
 }
 .menu__item__link {
   text-decoration: none;
-  color: #333;
 }
 .menu__item__link:hover {
-  text-decoration: overline solid #00412b;
-  color: #00412b;
+  text-decoration: overline solid var(--textColor);
+}
+.menu__item__boton--light-oscuro {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {

@@ -27,38 +27,6 @@
       rel="stylesheet"
     />
 
-    <!-- Formulario de contacto -->
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        // https://dashboard.emailjs.com/admin/account
-        emailjs.init({
-          publicKey: "sfVINC4xtNRT5uWcv",
-        });
-      })();
-    </script>
-    <script type="text/javascript">
-      window.onload = function () {
-        document
-          .getElementById("contact-form")
-          .addEventListener("submit", function (event) {
-            event.preventDefault();
-            // these IDs from the previous steps
-            emailjs.sendForm("service_t3jl3di", "contact_form", this).then(
-              () => {
-                console.log("SUCCESS!");
-              },
-              (error) => {
-                console.log("FAILED...", error);
-              }
-            );
-          });
-      };
-    </script>
-
     <title>A.S.G.</title>
   </head>
 
@@ -105,6 +73,15 @@
               height="35"
           /></a>
         </li>
+        <li>
+          <button class="menu__item__boton--light-oscuro">
+            <img
+              src="./public/images/light-dark.png"
+              alt="modo oscuro y claro"
+              style="width: 100%; height: 100%"
+            />
+          </button>
+        </li>
       </ul>
     </nav>
 
@@ -125,7 +102,8 @@
             Hola, soy Sebastian y soy desarrollador front-end
           </h3>
           <p class="presentacion__texto-parrafo">
-            Tengo <span data-edad>27 años</span> y soy Argentino.<br />
+            Tengo <span class="presentacion__edad"></span> años y soy
+            Argentino.<br />
             Desarrollo páginas web del lado del cliente, con las herramientas
             HTML, CSS y JavaScript; y prontamente tambien con ReactJs.
             Actualmente me encuentro aprendiendo, practicando y mejorando mis
@@ -461,7 +439,6 @@
               class="contacto__input-hidden"
               value="Sebastian"
             />
-            <p class="contacto__input-hidden-error contacto__mensaje-error"></p>
 
             <label for="input-email">Correo electrónico</label>
             <input
@@ -516,9 +493,20 @@
               class="contacto__textarea-mensaje-error contacto__mensaje-error"
             ></p>
 
-            <button class="contacto__boton--enviar" type="submit">
-              Enviar
-            </button>
+            <div
+              style="
+                margin-top: 1rem;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+              "
+            >
+              <button class="contacto__boton--enviar" type="submit">
+                Enviar
+              </button>
+              <span class="spinner-inline-block contacto__spinner"></span>
+            </div>
+
             <div style="margin: 10px">
               Servicio de correo electrónico:
               <a href="https://www.emailjs.com/" target="_blank"
@@ -603,7 +591,16 @@
       </section>
     </main>
 
-    <script src="./scripts/boton-menu.js"></script>
-    <script src="./scripts/validacion-formulario.js"></script>
+    <script src="./scripts/boton--menu.js"></script>
+    <script src="./scripts/boton--light-dark.js"></script>
+    <script src="./scripts/presentacion__edad.js"></script>
+    <script src="./scripts/validacion-formulario.js" type="module"></script>
+
+    <!-- Formulario de contacto -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script src="./scripts/emailjs.js" type="module"></script>
   </body>
 </html>
