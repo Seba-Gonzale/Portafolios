@@ -28,31 +28,38 @@
     />
 
     <!-- Formulario de contacto -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
-    <script type="text/javascript" defer>
-            (function() {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init({
-              publicKey: "sfVINC4xtNRT5uWcv",
-            });
-        })();
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "sfVINC4xtNRT5uWcv",
+        });
+      })();
     </script>
-      <script type="text/javascript">
-        window.onload = function() {
-          document.getElementById('contacto').addEventListener('submit', function(event) {
+    <script type="text/javascript">
+      window.onload = function () {
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
             event.preventDefault();
             // these IDs from the previous steps
-            emailjs.sendForm('contact_service', 'contacto', this)
-              .then(() => {
-                  console.log('SUCCESS!');
-              }, (error) => {
-                  console.log('FAILED...', error);
-              });
+            emailjs.sendForm("service_t3jl3di", "contact_form", this).then(
+              () => {
+                console.log("SUCCESS!");
+              },
+              (error) => {
+                console.log("FAILED...", error);
+              }
+            );
           });
-        }
-      </script>
+      };
+    </script>
 
-    <title>A. Sebastian Gonzale</title>
+    <title>A.S.G.</title>
   </head>
 
   <body>
@@ -444,24 +451,34 @@
         <div class="contacto__flex-container">
           <form
             action=""
+            id="contact-form"
             class="contacto__formulario"
             data-contacto__formulario
           >
-            <label for="user_email">Correo electrónico</label>
+            <input
+              type="hidden"
+              name="my_name"
+              class="contacto__input-hidden"
+              value="Sebastian"
+            />
+            <p class="contacto__input-hidden-error contacto__mensaje-error"></p>
+
+            <label for="input-email">Correo electrónico</label>
             <input
               required
+              id="input-email"
               class="contacto__input-email"
               type="email"
               name="user_email"
               placeholder="fulanito@gmail.com"
-              pattern="^[-\w.]+@([-\w]+\.)*[-\w]{2,4}$"
               title="Inserte un correo electrónico válido"
             />
             <p class="contacto__input-email-error contacto__mensaje-error"></p>
 
-            <label for="user_name">Nombre</label>
+            <label for="input-name">Nombre</label>
             <input
               required
+              id="input-name"
               class="contacto__input-nombre"
               type="text"
               name="user_name"
@@ -471,9 +488,10 @@
             />
             <p class="contacto__input-nombre-error contacto__mensaje-error"></p>
 
-            <label for="user_subject">Asunto</label>
+            <label for="input-subject">Asunto</label>
             <input
               required
+              id="input-subject"
               class="contacto__input-asunto"
               type="text"
               name="user_subject"
@@ -482,11 +500,12 @@
             />
             <p class="contacto__input-asunto-error contacto__mensaje-error"></p>
 
-            <label for="message"
+            <label for="textarea-message"
               >Mensaje (max: 300) <span class="contacto__contador"></span
             ></label>
             <textarea
               required
+              id="textarea-message"
               class="contacto__textarea-mensaje"
               name="message"
               cols="30"

@@ -13,6 +13,10 @@ const contadorTextarea = contacto__formulario.querySelector(
   ".contacto__contador"
 );
 
+contacto__formulario.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+
 inputsFormulario.push(textAreaHtml);
 
 //  inserción de eventos en los elementos html
@@ -20,7 +24,7 @@ inputsFormulario.forEach((input) => {
   input.addEventListener("blur", (event) => validacion(event.target));
 });
 
-contacto__boton.addEventListener("click", () => {
+contacto__boton.addEventListener("click", (e) => {
   inputsFormulario.forEach((input) => validacion(input));
 });
 
@@ -32,6 +36,7 @@ function validacion(input) {
   const elementError = contacto__formulario.querySelector(
     `.${input.classList[0] + "-error"}`
   );
+
   // si no es valido el input, se muestra el msj de error
   if (!input.checkValidity()) {
     elementError.textContent = inputErrorMessage(input);
