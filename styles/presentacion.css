@@ -6,7 +6,6 @@
 
   padding: var(--boxPadding);
   margin: 6vh 0;
-  /* height: 80vh; este height sumado con margin-top y margin-bottom da 92vh necesarios para despejar y centrar el elemento presentacion */
   transition: all 0.5s;
 }
 
@@ -54,7 +53,7 @@
 }
 .github-icon {
   border-radius: 50%;
-  background-color: var(--textColor);
+  background-color: #ccc;
 }
 .redes-icons:hover {
   transform: translate(0%, -10%);
