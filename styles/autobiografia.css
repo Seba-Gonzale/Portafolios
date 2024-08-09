@@ -7,10 +7,10 @@
     var(--backgroundColor) 100%
   );
   padding: var(--boxPadding);
-  padding-bottom: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 .autobiografia__titulo {
-  margin: 3rem 0 0;
   text-align: center;
 }
 .autobiografia__autor {

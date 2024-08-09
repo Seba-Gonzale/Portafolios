@@ -20,12 +20,14 @@ function getPreferredColorScheme() {
   return false; // Si el navegador no soporta matchMedia, asumimos 'light' como valor por defecto
 }
 
-boton_lightDark.addEventListener("click", (e) => {
-  body.classList.toggle("dark-mode");
-});
-
 /*  */
 /* Ejecucion del codigo */
 /*  */
 
 if (getPreferredColorScheme()) body.classList.toggle("dark-mode");
+
+if (boton_lightDark !== null) {
+  boton_lightDark.addEventListener("click", (e) => {
+    body.classList.toggle("dark-mode");
+  });
+}
