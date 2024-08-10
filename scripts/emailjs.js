@@ -21,6 +21,7 @@ window.onload = function () {
         },
         (error) => {
           console.log("FAILED...", error);
+          clearForm();
           alert("OH NO! OCURRIÓ UN ERROR.");
         }
       );
