@@ -1,13 +1,23 @@
 :root {
-  --backgroundColorBody: #fafafa;
+  --backgroundColorBody: #eee;
   --backgroundColor: #c2ffda;
   --boxShadow: 8px 8px 15px 0 rgba(0, 0, 0, 0.4);
-  --boxPadding: 0 10vw;
+  --boxPadding: 0 5vw;
   --textColor: #111;
   --scroll-margin-top: 5rem;
   --botonColor: #86efac;
   --botonColor2: #5eead4;
   --brightness: brightness(1);
+}
+
+.dark-mode {
+  --backgroundColorBody: #0c0a09;
+  --backgroundColor: #052e16;
+  --boxShadow: 8px 8px 15px 0 rgba(0, 0, 0, 0.4);
+  --textColor: #ccc;
+  --botonColor: #115e59;
+  --botonColor2: #15803d;
+  --brightness: brightness(0.8);
 }
 
 * {
@@ -60,6 +70,31 @@ h3 {
   animation: spin 1s infinite;
 }
 
+/* .container__boton--light-oscuro {
+
+} */
+.boton--light-oscuro {
+  background-color: transparent;
+  position: fixed;
+  right: 1.5rem;
+  top: 0.5rem;
+  text-align: center;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  cursor: pointer;
+  vertical-align: middle;
+  z-index: 1;
+}
+.boton--light-oscuro img {
+  vertical-align: middle;
+  background-color: white;
+  border-radius: 50%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -67,14 +102,4 @@ h3 {
   100% {
     transform: rotate(360deg);
   }
-}
-
-.dark-mode {
-  --backgroundColorBody: #0c0a09;
-  --backgroundColor: #052e16;
-  --boxShadow: 8px 8px 15px 0 rgba(0, 0, 0, 0.4);
-  --textColor: #ccc;
-  --botonColor: #115e59;
-  --botonColor2: #15803d;
-  --brightness: brightness(0.8);
 }

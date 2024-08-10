@@ -26,6 +26,7 @@
   width: 50%;
   line-height: 2rem;
   padding: 1rem;
+  border-radius: 20px;
 }
 .contacto__formulario label {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -52,12 +53,6 @@
 }
 
 .contacto__imagen {
-  /* flex: 1 1 50%;
-  background-image: url("../public/images/email-recibido.png");
-  background-size: cover;
-  background-position: 90% 0;
-  filter: var(--brightness); */
-
   flex: 1 1 50%;
   background-image: url(../public/images/email-recibido.png);
   background-size: cover;
@@ -90,40 +85,13 @@
 .contacto__spinner {
   display: none;
 }
-
-/* @media screen and (min-width: 992px) and (max-width: 1023px) {
-  .contacto__imagen {
-    display: none;
-  }
-  .contacto__flex-container {
-    background-image: url("../public/images/email-recibido.png");
-    background-size: cover;
-    background-position: 90% 45%;
-    border-radius: 20px;
-    filter: var(--brightness);
-  }
-  .contacto__formulario {
-    width: 50%;
-    border-radius: 20px;
-    background-color: var(--backgroundColor);
-  }
-} */
-
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  /* .contacto__imagen {
-    display: none;
-  }
-  .contacto__flex-container {
-    background-image: url("../public/images/email-recibido.png");
-    background-size: cover;
-    background-position: 90% 0;
-    border-radius: 20px;
-    filter: var(--brightness);
-  } */
   .contacto__formulario {
     width: 100%;
-    border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .contacto__formulario {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
   }
 }
 
