@@ -8,20 +8,23 @@ const inputsFormulario = [
 const textAreaHtml = contacto__formulario.querySelector(
   ".contacto__textarea-mensaje"
 );
-const contacto__boton = contacto__formulario.querySelector(
+const contacto__botonEnviar = contacto__formulario.querySelector(
   ".contacto__boton--enviar"
 );
 const contadorTextarea = contacto__formulario.querySelector(
   ".contacto__contador"
 );
-const contact__spinner =
-  contacto__formulario.querySelector(".contacto__spinner");
+const contactSpinners = contacto__formulario.querySelectorAll(
+  ".spinner-inline-block"
+);
 
 inputsFormulario.push(textAreaHtml);
 
 //  limpieza de los campos al enviar el formulario
 export function clearForm() {
-  contact__spinner.classList.toggle("contacto__spinner");
+  contactSpinners.forEach((spinner) =>
+    spinner.classList.toggle("contacto__spinner")
+  );
   inputsFormulario.forEach((element) => {
     element.value = "";
   });
@@ -32,12 +35,25 @@ inputsFormulario.forEach((input) => {
   input.addEventListener("blur", (event) => validacion(event.target));
 });
 
-contacto__boton.addEventListener("click", (e) => {
-  contact__spinner.classList.toggle("contacto__spinner");
-  inputsFormulario.forEach((input) => validacion(input));
+contacto__botonEnviar.addEventListener("click", (e) => {
+  contactSpinners.forEach((spinner) =>
+    spinner.classList.add("contacto__spinner")
+  );
+
+  const passed = [...inputsFormulario].reduce((passed, input) => {
+    if (!validacion(input)) passed = false;
+  }, true);
+
+  if (!passed)
+    contactSpinners.forEach((spinner) =>
+      spinner.classList.remove("contacto__spinner")
+    );
 });
 
-// procedimientos de validacion
+/**
+ * procedimientos de validacion
+ * @return {boolean} - si el input pasa la validacion retorna 'true' sinó 'false'
+ */
 function validacion(input) {
   // liberamos el valor del input de espacios para que no pase la validación si solo hay espacios vacios
   input.value = input.value.trim();
@@ -50,35 +66,38 @@ function validacion(input) {
   if (!input.checkValidity()) {
     elementError.textContent = inputErrorMessage(input);
     elementError.style.display = "block";
+    return false;
   } else {
     // si el input es valido se oculta el msj de error
     elementError.style.display = "none";
+    return true;
   }
 }
 
 // Objeto con mensajes personalizados segun el error obtenido
 const messageType = {
   valueMissing: {
-    nombre: "El campo no puede estar vacío!",
-    email: "El campo no puede estar vacío!",
-    asunto: "El campo no puede estar vacío!",
-    mensaje: "El mensaje no puede estar vacío!",
+    user_name: "El campo no puede estar vacío!",
+    user_email: "El campo no puede estar vacío!",
+    user_subject: "El campo no puede estar vacío!",
+    message: "El mensaje no puede estar vacío!",
   },
   typeMismatch: {
-    email: "El dato ingresado no es un correo electrónico (ej: text@text.com)",
+    user_email:
+      "El dato ingresado no es un correo electrónico (ej: text@text.com)",
   },
   patternMismatch: {
-    email: "El correo electrónico no es válido (ej: text@text.com)",
+    user_email: "El correo electrónico no es válido (ej: text@text.com)",
   },
   tooLong: {
-    nombre: "El texto supera la longitud permitida (50 caracteres)",
-    asunto: "El texto supera la longitud permitida (50 caracteres)",
+    user_name: "El texto supera la longitud permitida (50 caracteres)",
+    user_subject: "El texto supera la longitud permitida (50 caracteres)",
   },
 };
 
 // Corrobora cual fue el error y quien lo tuvo, y pide el mensaje correspondiente para el usuario
 function inputErrorMessage(input) {
-  for (errorName in input.validity) {
+  for (let errorName in input.validity) {
     if (input.validity[errorName]) {
       return messageType[errorName][input.name];
     }

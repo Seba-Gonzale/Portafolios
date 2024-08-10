@@ -52,19 +52,20 @@ h3 {
 }
 
 .spinner-block {
-  display: block;
+  display: none;
   width: 50px;
   height: 50px;
   border: 5px solid rgba(0, 0, 0, 0.1);
   border-top: 5px solid #3498db; /* Color del borde superior */
   border-radius: 50%;
-  animation: spin 1s linear infinite;
+  animation: spin 1s infinite;
 }
 .spinner-inline-block {
-  display: inline-block;
+  /* background-color: white; */
+  display: none;
   width: 30px;
   height: 30px;
-  border: 5px solid rgba(0, 0, 0, 0.1);
+  border: 5px solid white;
   border-top: 5px solid #3498db; /* Color del borde superior */
   border-radius: 50%;
   animation: spin 1s infinite;
