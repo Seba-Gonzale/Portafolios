@@ -82,6 +82,18 @@
   box-shadow: none;
 }
 
+/* error manejado por validacion-formulario.js */
+
+.contacto__mensaje-error {
+  display: none;
+  color: crimson;
+  padding-left: 1rem;
+  text-shadow: 0px 0px 1px black;
+  background-color: #ffffffaa;
+  border-radius: 20px;
+}
+
+/* Spinner */
 .contacto__spinner {
   display: inline-block;
 }
@@ -93,11 +105,4 @@
     padding: 0.5rem;
     border: 1px solid #ccc;
   }
-}
-
-/* error manejado por validacion-formulario.js */
-
-.contacto__mensaje-error {
-  display: none;
-  color: red;
 }
