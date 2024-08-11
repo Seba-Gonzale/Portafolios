@@ -5,8 +5,8 @@
     var(--backgroundColor) 100%
   );
   padding: var(--boxPadding);
-  padding-bottom: 10rem;
-  height: 70vw;
+  padding-bottom: 5rem;
+  height: 86vw;
   scroll-margin-top: var(
     --scroll-margin-top
   ); /* Esto hace que al moverse a ésta sección con el clic que se hace en la barra de navegacion, la barra no tape el titulo y se mueva un poco mas arriba*/
@@ -48,17 +48,17 @@
   left: 65%;
 }
 .hobbies__lista__autoconocimiento {
-  top: 35%;
+  top: 25vw;
   left: 50%;
   transform: translate(-50%, 0%);
 }
 .hobbies__lista__experimentos {
-  top: 50%;
+  top: 38vw;
   left: 65%;
 }
 /* Utilizo 2 selectores para hacer mas peso entorno a las configuracion de (.hobbies__lista li) para modificar el width*/
 .hobbies__lista .hobbies__lista__paseo {
-  top: 48%;
+  top: 38vw;
   left: 5%;
 }
 .hobbies__lista__paseo img {
